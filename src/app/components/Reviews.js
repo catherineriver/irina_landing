@@ -1,52 +1,66 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
 import styles from "@/app/page.module.css";
+import review1 from "@/app/assets/IMG_1465.jpg";
+import review2 from "@/app/assets/IMG_1460.jpg";
+import review3 from "@/app/assets/IMG_1468.jpg";
+import review4 from "@/app/assets/IMG_1470.jpg";
+import review5 from "@/app/assets/IMG_1473.jpg";
+import review6 from "@/app/assets/IMG_1471.jpg";
+import Image from "next/image";
 
 const reviews = [
-    {
-        name: "Анна Петрова",
-        review:
-            "Этот курс изменил мою жизнь! Благодаря поддержке и обратной связи Ирины я научилась лучше управлять своими эмоциями и справляться с выгоранием.",
-        imageUrl: "/path-to-image-1.jpg", // Замените на фактический путь к изображению
-        link: "#review1", // Ссылка или модальное окно с более подробной информацией
-    },
-    {
-        name: "Екатерина Иванова",
-        review:
-            "Программа оказалась очень полезной. Ирина - профессионал своего дела. Все объясняется четко, с примерами, и это помогло мне не только в работе, но и в личной жизни.",
-        imageUrl: "/path-to-image-2.jpg",
-        link: "#review2",
-    },
-    {
-        name: "Марина Кузнецова",
-        review:
-            "Курс был насыщенным и полезным, много практических заданий, которые помогли мне выйти из состояния постоянного стресса. Очень рекомендую!",
-        imageUrl: "/path-to-image-3.jpg",
-        link: "#review3",
-    },
+    review1, review2, review3, review4, review5, review6
 ];
 
 const Reviews = () => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const openModal = (image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
     return (
         <section className={styles.container}>
             <div className={styles.wrapper}>
                 <h2>Отзывы</h2>
-                    <div className={styles.grid}>
-                        {reviews.map((review, index) => (
-                            <a href={review.link} key={index} className={styles.card}>
-                                <img
-                                    src={review.imageUrl}
-                                    alt={review.name}
-                                    className={styles.image}
-                                />
-                                <div className={styles.textContainer}>
-                                    <h3>{review.name}</h3>
-                                    <p>{review.review}</p>
-                                </div>
-                            </a>
-                        ))}
+                <p>Моя система основана на успешной работе с более чем 100 клиентами в состоянии выгорания и прокрастинации. Самые рабочие методы собраны в этот курс. Я более 7 лет веду тренинги, была лектором в университете и углубленно изучала педагогику для взрослых. Я даю ключевую информацию простым языком и через юмор, поэтому она попадает прямо в цель и изменения неизбежны.</p>
+                <p>Отзывы о моих курсах:</p>
+                <div className={styles.grid}>
+                    {reviews.map((review, index) => (
+                        <div key={index} className={styles.photoWrapper} onClick={() => openModal(review)}>
+                            <Image
+                                src={review}
+                                alt={`Review ${index + 1}`}
+                                width={300}
+                                objectFit="cover"
+                                quality={100}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Модальное окно для увеличенных изображений */}
+            {selectedImage && (
+                <div className={styles.modal} onClick={closeModal}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <Image
+                            src={selectedImage}
+                            alt="Enlarged image"
+                            width={300}
+                            objectFit="contain"
+                        />
+                        <button className={styles.closeButton} onClick={closeModal}>Закрыть</button>
                     </div>
                 </div>
+            )}
         </section>
     );
 };
+
 export default Reviews;

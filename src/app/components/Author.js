@@ -24,7 +24,7 @@ const Author = () => {
     return (
         <div className={styles.author}>
             <div className={styles.highlight}>
-                <div>
+                <div className={styles.desc}>
                     <h2>{author.name}</h2>
                     <h3>{author.title}</h3>
                     <p>Член Ассоциации супервизоров Латвии. Более 10 лет опыта в консультировании по темам мотивации,
@@ -35,15 +35,16 @@ const Author = () => {
                         target="_blank">здесь</a></h3>
 
                     <div className={styles.socialLinks}>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/irinamazurika/" target="_blank" rel="noopener noreferrer"
                            className={styles.icon}>
                             <Image src={ig} alt="Instagram" width={20} height={20}/>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.linkedin.com/in/irina-mazurika-288a15239" target="_blank"
+                           rel="noopener noreferrer"
                            className={styles.icon}>
                             <Image src={linkedIn} alt="LinkedIn" width={20} height={20}/>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.facebook.com/i.mazurika" target="_blank" rel="noopener noreferrer"
                            className={styles.icon}>
                             <Image src={fb} alt="Facebook" width={20} height={20}/>
                         </a>
@@ -55,7 +56,7 @@ const Author = () => {
                     <Image
                         src={image} // Путь к вашему изображению
                         alt="Онлайн-курс по управлению уровнем энергии"
-                        width={300} // Ширина изображения
+                        width={250} // Ширина изображения
                         objectFit="cover" // Масштабируем изображение без искажений
                         quality={100} // Высокое качество изображения
                     />

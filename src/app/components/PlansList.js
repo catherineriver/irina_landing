@@ -19,6 +19,11 @@ const tariffs = {
             "price": 180,
             "original_price": 240,
             "description": [
+                "Уроки",
+                "Презентации",
+                "Эфир",
+                "Возможность участвовать в лотерее",
+                "Чат поддержки",
                 "Работа в личном чате с коучем",
                 "Персональные рекомендации от Ирины",
                 "Разбор домашних заданий"
@@ -38,41 +43,41 @@ const PlansList = () => {
     return (
         <>
             <section className={styles.container}>
-                    <h2 className={styles.centered}>Тарифы</h2>
+                <h2 className={styles.centered}>Тарифы</h2>
                 <div className={styles.plans}>
                     {tariffs.tariffs.map((tariff, index) => (
                         <div key={index} className={styles.plan}>
                             <h2>{tariff.name}</h2>
-                            <p>
-                                <strong>Цена: </strong>
+                            <p style={{fontWeight: "bold", fontSize: "26px", color: "green", textAlign: "center"}}>
                                 {tariff.price} € <span
-                                style={{textDecoration: "line-through"}}>{tariff.originalPrice} €</span>
+                                style={{textDecoration: "line-through", color: "gray"}}>{tariff.original_price} €</span>
                             </p>
-                            <h3>Что входит:</h3>
                             <ul>
                                 {tariff.description.map((item, idx) => (
                                     <li key={idx}>{item}</li>
                                 ))}
                             </ul>
-                            {tariff.recommendedFor && (
+                            {tariff.recommended_for && (
                                 <>
                                     <h3>Рекомендуется для:</h3>
                                     <ul>
-                                        {tariff.recommendedFor.map((recItem, idx) => (
+                                        {tariff.recommended_for.map((recItem, idx) => (
                                             <li key={idx}>{recItem}</li>
                                         ))}
                                     </ul>
                                 </>
                             )}
                             {tariff.note && <p><strong>Примечание: </strong>{tariff.note}</p>}
+
+                            <div className={styles.buttonWrapper}>
+                                <a href="#join" className={styles.button}>Выбираю </a>
+                            </div>
                         </div>
                     ))}
-                </div>
-                <h2>Повышение цены 3 ноября! Успей забрать курс по самой выгодной стоимости!</h2>
 
-                <div className={styles.buttonWrapper}>
-                    <a href="#join" className={styles.button}>Присоединиться</a>
                 </div>
+                <h2 style={{textAlign: "center"}}>Повышение цены 3 ноября! Успей забрать курс по самой выгодной
+                    стоимости!</h2>
 
             </section>
 

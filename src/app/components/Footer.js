@@ -10,15 +10,15 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.socialLinks}>
                 <div className={styles.socialLinks}>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.instagram.com/irinamazurika/" target="_blank" rel="noopener noreferrer"
                        className={styles.icon}>
                         <Image src={ig} alt="Instagram" width={20} height={20}/>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.linkedin.com/in/irina-mazurika-288a15239" target="_blank" rel="noopener noreferrer"
                        className={styles.icon}>
                         <Image src={linkedIn} alt="LinkedIn" width={20} height={20}/>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.facebook.com/i.mazurika" target="_blank" rel="noopener noreferrer"
                        className={styles.icon}>
                         <Image src={fb} alt="Facebook" width={20} height={20}/>
                     </a>
