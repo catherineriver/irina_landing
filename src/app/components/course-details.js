@@ -3,7 +3,7 @@ import styles from "@/app/page.module.css";
 const courseData = {
     "description": [
         "Почему кто-то энергичный и много успевает, а кто-то застревает в прокрастинации и хронической усталости? Почему одни зажигаются и выгорают, а другие умеют работать вдолгую и в конце рабочего дня у них есть силы на семью, друзей и спорт?",
-        "В результате курса у вас будет полноценная инструкция к себе и своим внутренним батарейкам."
+        "В результате курса у вас будет <b>полноценная инструкция к себе и своим внутренним батарейкам.</b>"
     ],
     "benefits": [
         "Как себя замедлять и разгонять, в зависимости от целей.",
@@ -77,13 +77,14 @@ const courseData4 = {
         "Финальный эфир с анонимным разбором ситуаций и розыгрышем призов"
     ]
 }
+
 const CourseDetails = () => {
     return (
         <>
-            <section className={styles.courseDetails}>
-                <div className={styles.container}>
+            <section className={styles.container}>
+                <div className={styles.wrapper}>
                     {courseData.description.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
+                        <p key={index} dangerouslySetInnerHTML={{__html: paragraph}}></p>
                     ))}
 
                     <ul className={styles.benefits}>
@@ -93,48 +94,41 @@ const CourseDetails = () => {
                     </ul>
 
                     <ul className={styles.benefits}>
-                        <p>Кому нужно участвовать:</p>
+                        <h2>Кому нужно участвовать:</h2>
                         {courseData.forWhom.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
 
-                    <a href="#join" className={styles.button}>Присоединиться</a>
+                    <div className={styles.buttonWrapper}>
+                        <a href="#join" className={styles.button}>Присоединиться</a>
+                    </div>
                 </div>
             </section>
-            <section className={styles.courseDetails}>
-                <div className={styles.container}>
-                    {courseData2.description.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                    ))}
-
+            <section className={styles.container}>
+                <div className={styles.wrapper}>
                     <ul className={styles.benefits}>
+                        <h2>В результате курса:</h2>
                         {courseData2.benefits.map((benefit, index) => (
                             <li key={index}>{benefit}</li>
                         ))}
                     </ul>
                 </div>
             </section>
-            <section className={styles.courseDetails}>
-                <div className={styles.container}>
-                    {courseData3.description.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                    ))}
-
+            <section className={styles.container}>
+                <div className={styles.highlight}>
                     <ul className={styles.benefits}>
+                        <h2>Что входит в курс?</h2>
                         {courseData3.benefits.map((benefit, index) => (
                             <li key={index}>{benefit}</li>
                         ))}
                     </ul>
                 </div>
             </section>
-            <section className={styles.courseDetails}>
-                <div className={styles.container}>
-                    {courseData4.description.map((paragraph, index) => (
-                        <p key={index}>{paragraph}</p>
-                    ))}
-
+            <section className={styles.container}>
+                <div className={styles.wrapper}>
                     <ul className={styles.benefits}>
+                        <h2>Программа курса:</h2>
                         {courseData4.benefits.map((benefit, index) => (
                             <li key={index}>{benefit}</li>
                         ))}

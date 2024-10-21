@@ -1,14 +1,14 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --text: #D5BFB7;
+  --background: #fff;
+  --foreground: #D5BFB7;
+  --text: #1C100B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0e0e0c;
+    --background: #fff;
     --foreground: #D5BFB7;
-    --text: #D5BFB7;
+    --text: #1C100B;
   }
 }
 
@@ -16,22 +16,55 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background: var(--background);
+  color: var(--text);
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Основной текст */
+  font-family: 'Nunito', sans-serif; /* Основной текст */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif; /* Заголовки */
   font-weight: 700; /* Жирные заголовки */
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 36px;
 }
 
 p, a, li {
-  font-size: 16px;
-  line-height: 1.34;
-  font-family: 'Roboto', sans-serif; /* Текст в параграфах и ссылках */
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Nunito', sans-serif; /* Текст в параграфах и ссылках */
   font-weight: 400;
+}
+
+ul {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+li {
+  list-style: none;
+  margin-left: 50px;
+
+}
+
+li:before {
+  content: "\2713";
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: bold;
+  color: #7B655B;
+}
+
+p {
+  margin: 16px 0;
 }
 
 * {

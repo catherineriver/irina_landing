@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
     <head>
       <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Nunito:wght@400;500;700&display=swap"
           rel="stylesheet"/>
     </head>
     <body>
