@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, {useRef, useState} from "react";
 import styles from "@/app/page.module.css";
 import review1 from "@/app/assets/IMG_1465.jpg";
 import review2 from "@/app/assets/IMG_1460.jpg";
@@ -15,6 +15,7 @@ const reviews = [
 
 const Reviews = () => {
     const [selectedImage, setSelectedImage] = useState(null);
+    const carouselRef = useRef(null);
 
     const openModal = (image) => {
         setSelectedImage(image);
@@ -24,25 +25,46 @@ const Reviews = () => {
         setSelectedImage(null);
     };
 
+    const scrollLeft = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    };
+
+    const scrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className={styles.container}>
             <div className={styles.wrapper}>
                 <h2>Отзывы</h2>
-                <p>Моя система основана на успешной работе с более чем 100 клиентами в состоянии выгорания и прокрастинации. Самые рабочие методы собраны в этот курс. Я более 7 лет веду тренинги, была лектором в университете и углубленно изучала педагогику для взрослых. Я даю ключевую информацию простым языком и через юмор, поэтому она попадает прямо в цель и изменения неизбежны.</p>
+                <p>Моя система основана на успешной работе с более чем 100 клиентами в состоянии выгорания и
+                    прокрастинации. Самые рабочие методы собраны в этот курс. Я более 7 лет веду тренинги, была лектором
+                    в университете и углубленно изучала педагогику для взрослых. Я даю ключевую информацию простым
+                    языком и через юмор, поэтому она попадает прямо в цель и изменения неизбежны.</p>
                 <p>Отзывы о моих курсах:</p>
-                <div className={styles.grid}>
-                    {reviews.map((review, index) => (
-                        <div key={index} className={styles.photoWrapper} onClick={() => openModal(review)}>
-                            <Image
-                                src={review}
-                                alt={`Review ${index + 1}`}
-                                width={300}
-                                objectFit="cover"
-                                quality={100}
-                            />
-                        </div>
-                    ))}
+                <div className={styles.carouselContainer}>
+                <button className={styles.scrollButton} onClick={scrollLeft}>←</button>
+                <div className={styles.carouselWrapper} ref={carouselRef}>
+                    <div className={styles.carousel}>
+                        {reviews.map((review, index) => (
+                            <div key={index} className={styles.photoWrapper} onClick={() => openModal(review)}>
+                                <Image
+                                    src={review}
+                                    alt={`Review ${index + 1}`}
+                                    width={300}
+                                    objectFit="cover"
+                                    quality={100}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                <button className={styles.scrollButton} onClick={scrollRight}>→</button>
+            </div>
             </div>
 
             {/* Модальное окно для увеличенных изображений */}

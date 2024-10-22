@@ -12,6 +12,17 @@ const tariffs = {
                 "Эфир",
                 "Возможность участвовать в лотерее",
                 "Чат поддержки"
+            ],
+            "closed": [
+                "Работа в личном чате с коучем",
+                "Персональные рекомендации от Ирины",
+                "Разбор домашних заданий"
+            ],
+            "recommended_for": [
+                "Те, кто в выгорании или выгорал когда-то",
+                "Руководители команд или бизнеса",
+                "Те, кто работает с людьми",
+                "Те, кто хочет получить максимальный результат"
             ]
         },
         {
@@ -42,7 +53,7 @@ const tariffs = {
 const PlansList = () => {
     return (
         <>
-            <section className={styles.container}>
+            <section className={styles.container} id="join">
                 <h2 className={styles.centered}>Тарифы</h2>
                 <div className={styles.plans}>
                     {tariffs.tariffs.map((tariff, index) => (
@@ -52,15 +63,19 @@ const PlansList = () => {
                                 {tariff.price} € <span
                                 style={{textDecoration: "line-through", color: "gray"}}>{tariff.original_price} €</span>
                             </p>
-                            <ul>
+                            <ul style={{ flexGrow: 0 }}>
                                 {tariff.description.map((item, idx) => (
                                     <li key={idx}>{item}</li>
+                                ))}
+                                {tariff.closed && tariff.closed.map((item, idx) => (
+                                    <li style={{ color: "gray", textDecorationLine: "line-through"}} key={idx}>{item}</li>
                                 ))}
                             </ul>
                             {tariff.recommended_for && (
                                 <>
-                                    <h3>Рекомендуется для:</h3>
-                                    <ul>
+
+                                    <ul style={{flexGrow: 1}}>
+                                        <h3>Рекомендуется для:</h3>
                                         {tariff.recommended_for.map((recItem, idx) => (
                                             <li key={idx}>{recItem}</li>
                                         ))}
@@ -76,7 +91,7 @@ const PlansList = () => {
                     ))}
 
                 </div>
-                <h2 style={{textAlign: "center"}}>Повышение цены 3 ноября! Успей забрать курс по самой выгодной
+                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 3 ноября! Успей забрать курс по самой выгодной
                     стоимости!</h2>
 
             </section>

@@ -2,6 +2,7 @@
   --background: #fff;
   --foreground: #D5BFB7;
   --text: #1C100B;
+  --primary-color: #D5BFB7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +19,7 @@ body {
   overflow-x: hidden;
   background: var(--background);
   color: var(--text);
+  scroll-behavior: smooth;
 }
 
 body {

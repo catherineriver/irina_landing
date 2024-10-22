@@ -39,7 +39,7 @@ const FAQ = () => {
             {faqs.map((faq, index) => (
                 <div key={index} className={styles.faqItem}>
                     <div className={styles.question} onClick={() => toggleFAQ(index)}>
-                        <h3>{faq.question}</h3>
+                        <p>{faq.question}</p>
                         <span>{activeIndex === index ? "-" : "+"}</span>
                     </div>
                     {activeIndex === index && <p className={styles.answer}>{faq.answer}</p>}

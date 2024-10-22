@@ -1,9 +1,27 @@
-import React from 'react';
-import Image from 'next/image'; // Для оптимизации изображений
+'use client';
+import React, {useEffect, useState} from 'react';
+import Image from 'next/image';
 import image from '@/app/assets/main.jpg'
 import styles from "@/app/page.module.css";
 
 const Hero = () => {
+    const [daysRemaining, setDaysRemaining] = useState(0);
+
+    useEffect(() => {
+        const calculateDaysRemaining = () => {
+            const today = new Date();
+            const targetDate = new Date(today.getFullYear(), 10, 18); // 18 ноября (месяцы начинаются с 0)
+            if (today > targetDate) {
+                targetDate.setFullYear(today.getFullYear() + 1);
+            }
+            const difference = targetDate - today;
+            const days = Math.ceil(difference / (1000 * 60 * 60 * 24));
+            setDaysRemaining(days);
+        };
+
+        calculateDaysRemaining();
+    }, []);
+
     return (
         <section className={styles.hero}>
                 <Image
@@ -17,9 +35,10 @@ const Hero = () => {
                     sizes="(min-width: 768px) 100vw, 33vw"
                 />
             <div className={styles.content}>
+                {daysRemaining !== 0 && <span>Старт через {daysRemaining} дней</span>}
+                <span>Telegram-канал с чатом</span>
                 <h1>Онлайн-курс по управлению уровнем энергии</h1>
-                <p>18.11.-18.12. в Telegram-канале с чатом</p>
-                <a href="#join" className={styles.button}>Присоединиться</a>
+                <a href="#join" style={{ marginTop: "32px"}} className={styles.button}>Присоединиться</a>
             </div>
         </section>
 

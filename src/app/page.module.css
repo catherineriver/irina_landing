@@ -48,7 +48,7 @@ a.button {
   z-index: 1;
   text-align: center;
   padding: 2rem 1rem;
-  background: linear-gradient(to top, rgb(18 18 18), rgb(143 148 149));
+  background: linear-gradient(to top, rgb(255 255 255), rgb(142 151 153));
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -60,13 +60,6 @@ a.button {
   font-size: 28px;
   line-height: 1.23;
   margin-bottom: 24px;
-  color: #D5BFB7;
-}
-
-.hero p {
-  font-size: 16px;
-  margin-bottom: 2rem;
-  color: #ABACAC;
 }
 
 .button {
@@ -78,12 +71,6 @@ a.button {
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: transparent;
-  box-shadow: 0 0 0 1px #D5BFB7;
-  color: white;
 }
 
 .centered {
@@ -102,7 +89,6 @@ a.button {
 
 .highlight {
   box-shadow: 0 0 25px lightgray;
-  border-radius: 10px;
   padding: 30px;
   max-width: 1000px;
   margin: 20px;
@@ -170,8 +156,7 @@ a.button {
   margin: 16px 0;
 }
 
-.faq-item {
-  border-bottom: 1px solid #ccc;
+.faqItem {
   padding: 10px 0;
   cursor: pointer;
 }
@@ -180,6 +165,9 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background: #d5bfb7;
+  padding: 10px 20px;
 }
 
 .question span {
@@ -274,8 +262,59 @@ a.button {
   background-color: #f1f1f1;
 }
 
+.carouselContainer {
+  display: flex;
+  align-items: center;
+}
+
+.carouselWrapper {
+  overflow-x: scroll;
+  display: flex;
+  flex-grow: 1;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+.carouselWrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Chrome, Safari */
+}
+
+.carousel {
+  display: flex;
+  gap: 10px; /* Space between images */
+}
+
+.photoWrapper {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.scrollButton {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+}
+
 
 @media (min-width: 768px) {
+
+  .scrollButton {
+    cursor: pointer;
+  }
+
+  .scrollButton:hover {
+    background-color: #ddd;
+  }
+  .button {
+    transition: all 0.2s ease-in-out;
+    max-width: max-content;
+  }
+  .button:hover {
+    background-color: #D5BFB7;
+    transform: scale(101%);
+    color: #1C100B;
+  }
   .author {
     width: 100%;
     max-width: 1200px;
@@ -319,10 +358,6 @@ a.button {
     position: relative;
   }
 
-  .button {
-    max-width: max-content;
-  }
-
   .imageWrapper {
     position: absolute;
     top: 0;
@@ -347,12 +382,12 @@ a.button {
   .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    line-height: 1.05;
+    color: var(--primary-color);
   }
 
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #ABACAC;
+  .hero span {
+    color: #94928D;
   }
 
   .socialLinks {
