@@ -55,8 +55,10 @@ const Reviews = () => {
                                 <Image
                                     src={review}
                                     alt={`Review ${index + 1}`}
-                                    width={300}
-                                    objectFit="cover"
+                                    fill
+                                    style={{
+                                        objectFit: 'contain',
+                                    }}
                                     quality={100}
                                 />
                             </div>
@@ -74,10 +76,13 @@ const Reviews = () => {
                         <Image
                             src={selectedImage}
                             alt="Enlarged image"
-                            width={300}
-                            objectFit="contain"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            fill
+                            style={{
+                                objectFit: 'contain',
+                            }}
                         />
-                        <button className={styles.closeButton} onClick={closeModal}>Закрыть</button>
+                        <button className={styles.closeButton} onClick={closeModal}>x</button>
                     </div>
                 </div>
             )}

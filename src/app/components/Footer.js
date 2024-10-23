@@ -9,20 +9,18 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.socialLinks}>
-                <div className={styles.socialLinks}>
-                    <a href="https://www.instagram.com/irinamazurika/" target="_blank" rel="noopener noreferrer"
-                       className={styles.icon}>
-                        <Image src={ig} alt="Instagram" width={20} height={20}/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/irina-mazurika-288a15239" target="_blank" rel="noopener noreferrer"
-                       className={styles.icon}>
-                        <Image src={linkedIn} alt="LinkedIn" width={20} height={20}/>
-                    </a>
-                    <a href="https://www.facebook.com/i.mazurika" target="_blank" rel="noopener noreferrer"
-                       className={styles.icon}>
-                        <Image src={fb} alt="Facebook" width={20} height={20}/>
-                    </a>
-                </div>
+                <a href="https://www.instagram.com/irinamazurika/" target="_blank" rel="noopener noreferrer"
+                   className={styles.icon}>
+                    <Image src={ig} alt="Instagram" width={20} height={20}/>
+                </a>
+                <a href="https://www.linkedin.com/in/irina-mazurika-288a15239" target="_blank" rel="noopener noreferrer"
+                   className={styles.icon}>
+                    <Image src={linkedIn} alt="LinkedIn" width={20} height={20}/>
+                </a>
+                <a href="https://www.facebook.com/i.mazurika" target="_blank" rel="noopener noreferrer"
+                   className={styles.icon}>
+                    <Image src={fb} alt="Facebook" width={20} height={20}/>
+                </a>
             </div>
 
             <div className={styles.legalLinks}>
@@ -32,7 +30,7 @@ const Footer = () => {
 
             <div className={styles.contactInfo}>
                 <p>Что-то пошло не так? Напишите нам:</p>
-                <a href="mailto:info@slimbyfromane.com" className={styles.link}>info@slimbyfromane.com</a>
+                <a href="mailto:irinamazurika@gmail.com" className={styles.link}>irinamazurika@gmail.com</a>
             </div>
         </footer>
     );

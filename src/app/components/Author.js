@@ -30,25 +30,26 @@ const Author = () => {
                     <p>Член Ассоциации супервизоров Латвии. Более 10 лет опыта в консультировании по темам мотивации,
                         выхода из кризисных ситуаций и восстановления ментального здоровья. Ведет тренинги по
                         профилактике выгорания для экспертов Латвии, Европы и Средней Азии.</p>
-                    <h3>Подробнее об авторе курса читайте <a
-                        href="https://www.instagram.com/p/Cqm6xx7s9Gm/?igsh=MWNpY21pY3ZoNW84YQ=="
-                        target="_blank">здесь</a></h3>
-
                     <div className={styles.socialLinks}>
                         <a href="https://www.instagram.com/irinamazurika/" target="_blank" rel="noopener noreferrer"
                            className={styles.icon}>
-                            <Image src={ig} alt="Instagram" width={20} height={20}/>
+                            <Image src={ig} alt="Instagram" width={25} height={25}/>
                         </a>
                         <a href="https://www.linkedin.com/in/irina-mazurika-288a15239" target="_blank"
                            rel="noopener noreferrer"
                            className={styles.icon}>
-                            <Image src={linkedIn} alt="LinkedIn" width={20} height={20}/>
+                            <Image src={linkedIn} alt="LinkedIn" width={25} height={25}/>
                         </a>
                         <a href="https://www.facebook.com/i.mazurika" target="_blank" rel="noopener noreferrer"
                            className={styles.icon}>
-                            <Image src={fb} alt="Facebook" width={20} height={20}/>
+                            <Image src={fb} alt="Facebook" width={25} height={25}/>
                         </a>
                     </div>
+                    <h3>Подробнее об авторе курса читайте <a
+                        href="https://www.instagram.com/p/Cqm6xx7s9Gm/?igsh=MWNpY21pY3ZoNW84YQ=="
+                        target="_blank">здесь</a></h3>
+
+
                 </div>
 
 
@@ -56,7 +57,7 @@ const Author = () => {
                     <Image
                         src={image} // Путь к вашему изображению
                         alt="Онлайн-курс по управлению уровнем энергии"
-                        width={250} // Ширина изображения
+                        width={320} // Ширина изображения
                         objectFit="cover" // Масштабируем изображение без искажений
                         quality={100} // Высокое качество изображения
                     />

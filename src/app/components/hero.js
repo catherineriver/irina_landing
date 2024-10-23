@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import image from '@/app/assets/main.jpg'
+import imageMobile from '@/app/assets/main-mobile.jpg'
 import styles from "@/app/page.module.css";
 
 const Hero = () => {
@@ -24,6 +25,7 @@ const Hero = () => {
 
     return (
         <section className={styles.hero}>
+            <div className={styles.heroDesktop}>
                 <Image
                     src={image} // Путь к вашему изображению
                     alt="Онлайн-курс по управлению уровнем энергии"
@@ -34,11 +36,23 @@ const Hero = () => {
                     quality={100} // Высокое качество изображения
                     sizes="(min-width: 768px) 100vw, 33vw"
                 />
+            </div>
+            <div className={styles.heroMobile}>
+                <Image
+                    src={imageMobile} // Путь к вашему изображению
+                    alt="Онлайн-курс по управлению уровнем энергии"
+                    fill
+                    style={{
+                        objectFit: 'contain',
+                    }}
+                    quality={100}
+                />
+            </div>
             <div className={styles.content}>
                 {daysRemaining !== 0 && <span>Старт через {daysRemaining} дней</span>}
                 <span>Telegram-канал с чатом</span>
                 <h1>Онлайн-курс по управлению уровнем энергии</h1>
-                <a href="#join" style={{ marginTop: "32px"}} className={styles.button}>Присоединиться</a>
+                <a href="#join" style={{marginTop: "32px"}} className={styles.button}>Присоединиться</a>
             </div>
         </section>
 

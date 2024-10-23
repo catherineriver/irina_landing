@@ -51,6 +51,24 @@ const tariffs = {
 }
 
 const PlansList = () => {
+    // Получаем текущую дату
+    const today = new Date();
+
+// Устанавливаем дату первого повышения цен
+    const priceIncreaseDate = new Date(today.getFullYear(), 10, 3); // 10 - это ноябрь (месяцы начинаются с 0)
+
+// Функция для обновления цены
+    function updatePrice() {
+        const currentPriceElement = document.getElementById("current-price");
+        const originalPriceElement = document.getElementById("original-price");
+
+        if (today >= priceIncreaseDate) {
+            // Заменяем текущую цену
+            currentPriceElement.textContent = "80 €";
+            // Оставляем старую цену зачеркнутой
+            originalPriceElement.textContent = "110 €";
+        }
+    }
     return (
         <>
             <section className={styles.container} id="join">
