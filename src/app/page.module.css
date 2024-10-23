@@ -389,8 +389,18 @@ a.button {
     border: 1px solid #7B655B;
     padding: 10px 20px;
   }
+
+  .heroDesktop {
+    display: block;
+  }
+
+  .heroMobile {
+    display: none;
+  }
+
   .hero {
     position: relative;
+    display: block;
   }
 
   .imageWrapper {
