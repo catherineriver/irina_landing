@@ -27,13 +27,13 @@ const Reviews = () => {
 
     const scrollLeft = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: -400, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (carouselRef.current) {
-            carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+            carouselRef.current.scrollBy({ left: 400, behavior: 'smooth' });
         }
     };
 
