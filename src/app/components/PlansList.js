@@ -25,7 +25,8 @@ const tariffs = {
                 "Тем, кто обладает сильной эмпатией и кому сложно отделить свои эмоции от чужих",
                 "Тем, чья работа связана с постоянным взаимодействием с людьми",
                 "Тем, кому достаточно общих обсуждений заданий и поддержки в чате"
-            ]
+            ],
+            "link": "https://buy.stripe.com/3cseXw2Jmb1g9wYbII"
         },
         {
             "name": "С коучем (10 мест)",
@@ -47,7 +48,8 @@ const tariffs = {
                 "Тем, чья работа связана с постоянным взаимодействием с людьми",
                 "Тем, кто стремится достичь максимальных результатов"
             ],
-            "note": "Обратная связь всегда объемней, чем просто разбор заданий."
+            "note": "Обратная связь всегда объемней, чем просто разбор заданий.",
+            "link": "https://buy.stripe.com/eVaaHg4Rufhw38AaEF"
         }
     ]
 }
@@ -103,10 +105,10 @@ const PlansList = () => {
                                 </>
                             )}
                             {tariff.note && <p><strong>Примечание: </strong>{tariff.note}</p>}
-
-                            <div className={styles.buttonWrapper}>
-                                <a href="#join" className={styles.button}>Выбираю </a>
-                            </div>
+                            {tariff.link &&
+                                        <div className={styles.buttonWrapper}>
+                                            <a href={tariff.link} className={styles.button}>Выбираю </a>
+                                        </div>}
                         </div>
                     ))}
 
