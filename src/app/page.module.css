@@ -321,6 +321,7 @@ a.button {
 @media (min-width: 768px) {
   .footer {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
