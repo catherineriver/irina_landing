@@ -4,7 +4,7 @@ const tariffs = {
     "tariffs": [
         {
             "name": "Самостоятельный",
-            "price": 65,
+            "price": 80,
             "original_price": 110,
             "description": [
                 "Уроки",
@@ -30,7 +30,7 @@ const tariffs = {
         },
         {
             "name": "С коучем (10 мест)",
-            "price": 180,
+            "price": 210,
             "original_price": 240,
             "description": [
                 "Уроки",
@@ -113,7 +113,7 @@ const PlansList = () => {
                     ))}
 
                 </div>
-                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 3 ноября! Успей забрать курс по самой выгодной
+                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 6 ноября! Успей забрать курс по самой выгодной
                     стоимости!</h2>
 
             </section>
