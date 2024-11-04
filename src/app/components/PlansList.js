@@ -4,7 +4,7 @@ const tariffs = {
     "tariffs": [
         {
             "name": "Самостоятельный",
-            "price": 80,
+            "price": 65,
             "original_price": 110,
             "description": [
                 "Уроки",
@@ -30,7 +30,7 @@ const tariffs = {
         },
         {
             "name": "С коучем (10 мест)",
-            "price": 210,
+            "price": 180,
             "original_price": 240,
             "description": [
                 "Уроки",
