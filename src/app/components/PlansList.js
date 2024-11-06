@@ -4,7 +4,7 @@ const tariffs = {
     "tariffs": [
         {
             "name": "Самостоятельный",
-            "price": 65,
+            "price": 80,
             "original_price": 110,
             "description": [
                 "Уроки",
@@ -26,11 +26,11 @@ const tariffs = {
                 "Тем, чья работа связана с постоянным взаимодействием с людьми",
                 "Тем, кому достаточно общих обсуждений заданий и поддержки в чате"
             ],
-            "link": "https://buy.stripe.com/3cseXw2Jmb1g9wYbII"
+            "link": "https://buy.stripe.com/00gg1AgAcglA9wYeUW"
         },
         {
             "name": "С коучем (10 мест)",
-            "price": 180,
+            "price": 200,
             "original_price": 240,
             "description": [
                 "Уроки",
@@ -49,30 +49,12 @@ const tariffs = {
                 "Тем, кто стремится достичь максимальных результатов"
             ],
             "note": "Обратная связь всегда объемней, чем просто разбор заданий.",
-            "link": "https://buy.stripe.com/eVaaHg4Rufhw38AaEF"
+            "link": "https://buy.stripe.com/cN22aK83Gfhw4cE9AD"
         }
     ]
 }
 
 const PlansList = () => {
-    // Получаем текущую дату
-    const today = new Date();
-
-// Устанавливаем дату первого повышения цен
-    const priceIncreaseDate = new Date(today.getFullYear(), 10, 3); // 10 - это ноябрь (месяцы начинаются с 0)
-
-// Функция для обновления цены
-    function updatePrice() {
-        const currentPriceElement = document.getElementById("current-price");
-        const originalPriceElement = document.getElementById("original-price");
-
-        if (today >= priceIncreaseDate) {
-            // Заменяем текущую цену
-            currentPriceElement.textContent = "80 €";
-            // Оставляем старую цену зачеркнутой
-            originalPriceElement.textContent = "110 €";
-        }
-    }
     return (
         <>
             <section className={styles.container} id="join">
@@ -113,7 +95,7 @@ const PlansList = () => {
                     ))}
 
                 </div>
-                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 6 ноября! Успей забрать курс по самой выгодной
+                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 15 ноября! Успей забрать курс по самой выгодной
                     стоимости!</h2>
 
             </section>
