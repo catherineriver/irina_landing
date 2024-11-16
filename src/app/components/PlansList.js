@@ -26,7 +26,7 @@ const tariffs = {
                 "Тем, чья работа связана с постоянным взаимодействием с людьми",
                 "Тем, кому достаточно общих обсуждений заданий и поддержки в чате"
             ],
-            "link": "https://buy.stripe.com/00gg1AgAcglA9wYeUW"
+            "link": "https://buy.stripe.com/4gwaHg6ZCeds5gIdQU"
         },
         {
             "name": "С коучем (10 мест)",
@@ -49,7 +49,7 @@ const tariffs = {
                 "Тем, кто стремится достичь максимальных результатов"
             ],
             "note": "Обратная связь всегда объемней, чем просто разбор заданий.",
-            "link": "https://buy.stripe.com/cN22aK83Gfhw4cE9AD"
+            "link": "https://buy.stripe.com/4gw02C97K0mC4cE3ch"
         }
     ]
 }
@@ -64,8 +64,7 @@ const PlansList = () => {
                         <div key={index} className={styles.plan}>
                             <h2>{tariff.name}</h2>
                             <p style={{fontWeight: "bold", fontSize: "26px", color: "green", textAlign: "center"}}>
-                                {tariff.price} € <span
-                                style={{textDecoration: "line-through", color: "gray"}}>{tariff.original_price} €</span>
+                                {tariff.original_price} €
                             </p>
                             <ul style={{ flexGrow: 0 }}>
                                 {tariff.description.map((item, idx) => (
@@ -95,9 +94,6 @@ const PlansList = () => {
                     ))}
 
                 </div>
-                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 15 ноября! Успей забрать курс по самой выгодной
-                    стоимости!</h2>
-
             </section>
 
         </>
