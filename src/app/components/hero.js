@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
             <div className={styles.content}>
                 <h1>Онлайн-курс по управлению уровнем энергии</h1>
-                {daysRemaining !== 0 && <span>Старт через {daysRemaining} дней</span>}
+                {daysRemaining !== 0 && <span>Старт через {daysRemaining} дня</span>}
                 <span>Telegram-канал с чатом</span>
                 <a href="#join" style={{marginTop: "32px"}} className={styles.button}>Присоединиться</a>
             </div>
