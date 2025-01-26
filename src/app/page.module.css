@@ -12,6 +12,14 @@
   flex-direction: column;
 }
 
+.benefits span {
+  color: green;
+}
+
+li.stars:before {
+    content: "\2605";
+}
+
 a.button {
   text-decoration: none;
   font-weight: bold;
@@ -41,6 +49,7 @@ a.button {
 
 .heroDesktop {
   display: none;
+  filter: brightness(0.44);
 }
 
 .heroMobile {
@@ -57,12 +66,15 @@ a.button {
   z-index: 1;
   text-align: center;
   padding: 0 16px;
-  background: linear-gradient(to top, rgb(255 255 255), rgb(142 151 153));
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    background: linear-gradient(to top, rgb(255 255 255), rgb(142 151 153));
+  }
 }
 
 .hero h1 {
@@ -130,7 +142,6 @@ a.button {
 }
 
 .plans {
-
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -397,7 +408,6 @@ a.button {
     gap: 16px;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
     margin: 32px auto;
   }
 
