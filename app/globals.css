@@ -1,0 +1,102 @@
+:root {
+  --background: #fff;
+  --foreground: #D5BFB7;
+  --text: #1C100B;
+  --primary-color: #D5BFB7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fff;
+    --foreground: #D5BFB7;
+    --text: #1C100B;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif; /* Основной текст */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif; /* Заголовки */
+  font-weight: 700; /* Жирные заголовки */
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Nunito', sans-serif; /* Текст в параграфах и ссылках */
+  font-weight: 400;
+}
+
+ul {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+li {
+  list-style: none;
+  margin-left: 20px;
+
+}
+
+li:before {
+  content: "\25E6";
+  position: absolute;
+  margin-left: -1.3em;
+  font-weight: bold;
+  color: #7B655B;
+}
+
+p {
+  margin: 16px 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  p, li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  li {
+    list-style: none;
+    margin-left: 50px;
+
+  }
+}
