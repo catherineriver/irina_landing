@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import image from '@/app/assets/main.jpg'
-import imageMobile from '@/app/assets/main-mobile-2.jpg'
+import imageMobile from '@/app/assets/main-mobile.jpg'
 import styles from "@/app/page.module.css";
 
 const Hero = () => {
