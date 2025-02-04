@@ -13,7 +13,6 @@ export default function Home() {
         <CourseDetails />
           <PlansList />
           <Author />
-          <Reviews />
           <FAQ />
           <Footer />
       </>

@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import image from '@/app/assets/main.jpg'
-import imageMobile from '@/app/assets/main-mobile.jpg'
+import imageMobile from '@/app/assets/main-mobile-2.jpg'
 import styles from "@/app/page.module.css";
 
 const Hero = () => {
@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
             <div className={styles.content}>
                 <h1>Онлайн-курс по самоценности</h1>
-                {daysRemaining !== 0 && <span>Старт через {daysRemaining} дней</span>}
+                <span>Старт курса 27.02</span>
                 <span>Видео-лекции в записи в Telegram-канале</span>
                 <a href="#join" style={{marginTop: "32px"}} className={styles.button}>Присоединиться</a>
             </div>

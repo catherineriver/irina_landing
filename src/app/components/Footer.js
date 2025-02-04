@@ -24,8 +24,8 @@ const Footer = () => {
             </div>
 
             <div className={styles.legalLinks}>
-                <a target="_blank" href="https://drive.google.com/file/d/1t-Ejak65cbIdn0O-U29WmMHnuKx0W8J9/view?usp=sharing" className={styles.link}>Политика конфиденциальности</a>
-                <a target="_blank" href="https://drive.google.com/file/d/1DuJIQRaV0RslReh6zKjQHjDHCFoYa9cM/view?usp=sharing" className={styles.link}>Договор оферты</a>
+                <a target="_blank" href="https://drive.google.com/file/d/1FMFoMHj8nqT6rP8Lb37PwFkhcf_xYJoU/view?usp=sharing" className={styles.link}>Политика конфиденциальности</a>
+                <a target="_blank" href="https://drive.google.com/file/d/1sSOYOrAxk65y1X1CybtA1Bbb5WvQz2lb/view?usp=sharing" className={styles.link}>Договор оферты</a>
             </div>
 
             <div className={styles.contactInfo}>

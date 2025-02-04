@@ -1,4 +1,5 @@
 import styles from "@/app/page.module.css";
+import Reviews from "@/app/components/Reviews";
 
 const courseData = {
     "description": [
@@ -98,6 +99,7 @@ const CourseDetails = () => {
                     </ul>
                 </div>
             </section>
+            <Reviews />
             <section className={styles.container}>
                 <div className={styles.wrapper}>
                     <ul className={styles.benefits}>

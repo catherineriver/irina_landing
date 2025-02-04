@@ -18,7 +18,7 @@ const tariffs = {
                 "Работа в личном чате с коучем",
                 "Персональный разбор домашних заданий и рекомендации от Ирины"
             ],
-            "link": "https://buy.stripe.com/3cseXw2Jmb1g9wYbII"
+            "link": "https://buy.stripe.com/dR6bLkgAcglA6kMdQW"
         },
         {
             "name": "ХОЧУ ИЗМЕНЕНИЙ",
@@ -36,7 +36,7 @@ const tariffs = {
                 "Работа в личном чате с коучем",
                 "Персональный разбор домашних заданий и рекомендации от Ирины"
             ],
-            "link": "https://buy.stripe.com/eVaaHg4Rufhw38AaEF"
+            "link": "https://buy.stripe.com/00gg1AgAcglA9wYeUW"
         },
         {
             "name": "ВЫБИРАЮ ЛУЧШЕЕ",
