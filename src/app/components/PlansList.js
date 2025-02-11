@@ -4,7 +4,7 @@ const tariffs = {
     "tariffs": [
         {
             "name": "ТОЛЬКО ПОСМОТРЕТЬ",
-            "price": 68,
+            "price": 80,
             "original_price": 110,
             "description": [
                 "9 видео-уроков в записи для просмотра в удобное время",
@@ -18,11 +18,11 @@ const tariffs = {
                 "Работа в личном чате с коучем",
                 "Персональный разбор домашних заданий и рекомендации от Ирины"
             ],
-            "link": "https://buy.stripe.com/dR6bLkgAcglA6kMdQW"
+            "link": "https://buy.stripe.com/8wMbLk3NqedsdNefZ5"
         },
         {
             "name": "ХОЧУ ИЗМЕНЕНИЙ",
-            "price": 80,
+            "price": 100,
             "original_price": 140,
             "description": [
                 "9 видео-уроков в записи для просмотра в удобное время",
@@ -36,11 +36,11 @@ const tariffs = {
                 "Работа в личном чате с коучем",
                 "Персональный разбор домашних заданий и рекомендации от Ирины"
             ],
-            "link": "https://buy.stripe.com/00gg1AgAcglA9wYeUW"
+            "link": "https://buy.stripe.com/7sI02C3Nq1qG24wdQY"
         },
         {
             "name": "ВЫБИРАЮ ЛУЧШЕЕ",
-            "price": 180,
+            "price": 200,
             "original_price": 240,
             "description": [
                 "9 видео-уроков в записи для просмотра в удобное время",
@@ -53,7 +53,7 @@ const tariffs = {
                 "Персональный разбор домашних заданий и рекомендации от Ирины"
             ],
             "note": "Обратная связь дается подробно в аудио формате или в сообщениях, предполагает дополнительные вопросы для более глубокого узнавания себя. Доходимость до финала на этом тарифе 95%",
-            "link": "https://buy.stripe.com/eVaaHg4Rufhw38AaEF"
+            "link": "https://buy.stripe.com/8wM7v497K8T8dNeaEN"
         }
     ]
 }
