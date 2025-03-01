@@ -114,7 +114,7 @@ const PlansList = () => {
                     ))}
 
                 </div>
-                <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 10 февраля! Успей забрать курс по самой выгодной стоимости!</h2>
+                // <h2 style={{textAlign: "center", margin: "48px auto", maxWidth: "60%"}}>Повышение цены 10 февраля! Успей забрать курс по самой выгодной стоимости!</h2>
 
             </section>
 
