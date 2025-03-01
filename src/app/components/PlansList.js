@@ -83,8 +83,8 @@ const PlansList = () => {
                         <div key={index} className={styles.plan}>
                             <h2>{tariff.name}</h2>
                             <p style={{fontWeight: "bold", fontSize: "26px", color: "green", textAlign: "center"}}>
-                                {tariff.price} € <span
-                                style={{textDecoration: "line-through", color: "gray"}}>{tariff.original_price} €</span>
+                                {tariff.price} € {tariff.original_price && <span
+                                style={{textDecoration: "line-through", color: "gray"}}>{tariff.original_price} €</span>}
                             </p>
                             <ul style={{ flexGrow: 0 }}>
                                 {tariff.description.map((item, idx) => (
